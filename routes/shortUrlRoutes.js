@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const shortUrlController = require("../controllers/shortUrlController");
 
-router.get("/", (req, res) => {
-  res.send("Hi Every thing is working here :)!");
-});
+router.post("/", shortUrlController.shrink);
 
 module.exports = router;
