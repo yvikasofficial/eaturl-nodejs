@@ -23,7 +23,10 @@ const shortUrlSchema = new mongoose.Schema({
   },
   browserUid: {
     type: String,
-    required: true,
+  },
+  userUid: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
   },
 });
 
